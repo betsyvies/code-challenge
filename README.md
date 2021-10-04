@@ -1,71 +1,35 @@
-# CODE CHALLENGE
-### Matter Supply Co.
-### Technologist (Web Technologies)
+# Welcome Gists Blog
 
+Gists Blog is a website where you can search for different technological topics, code of different programming languages. I sure that you will enjoy it. 
 
-## Intro
+Happy learning and coding!!!
 
-The idea is that you display the skills required to build scalable frontend applications. In this code challenge, you will be asked to build a single page application in the framework React JS, consuming web services and building a presentable UI.
+## Getting started
 
-You will be required to make a trade-off between visual aesthetics, scalability, test coverage, and feature completeness. When we grade your code challenge, we will take that into account — none of your work gets discarded regardless if it was completed or not. We are aware that the time we propose for this code challenge is short to deliver a complete solution.
-
-The first aspect that we pay attention to is the user experience: load times, clarity of interactions, thoughtful and well executed animations, as well as an eye for detail. We place a strong focus on quality and one major indicator of quality is the quality of the user interface.
-
-The second aspect is the structure of your application. While this application doesn't necessarily warrant one of the big frameworks, we'd still like to see how you would implement this as part of a larger scale initiative if time permits. At Matter Supply, we're often tasked with architecting larger frontend initiatives.
-
-The third aspect is testing. We're not looking for 100% coverage or much coverage at all. But we'd like to see how you fare in setting up basic testing structures.
-
-We would love to get to know you in-depth, so feel free to provide us code samples of your work in addition to this challenge. Github repos or code snippets work just fine. Don’t hesitate to add your thoughts, as all is accountable for evaluation.
-
-Overall, we expect you to document your work. A well documented approach in this instance is better than a complete solution as we want to understand your thinking process and your ability to work with others within a distributed team overseas.
-
-## Challenge
-
-We're transporting you back to the early 2000's – we're building a quick blog. We're asking you to build an application with two pages:
-
-- Blog posts, to display a list blog posts and a short excerpt, and
-- Post detail, to display a full blog post.
-
-The backend for this blog are Github Gists. The idea is that you can enter  a username to look up on Github and the index page (blog posts) will display excerpts of all the user saved Gists. The post detail page will then display the full content of the gist.
-
-Blog posts page must be searchable, and Post details page must be able to show its formatted Markdown as HTML in the case Gists content was saved with `.md` extension.
-
-## Requirements
-
-### Markup/UI implementation
-
-Paying attention to details is important, so is using good UI patterns at the moment of implementing a design. In this repository you'll find some files to support your work on:
-
-- Design: `/support-files/designs/`
-- Fonts: `/support-files/fonts/`
-
-You'll be challenged to implement a clean UX using those files to base your experience on.
-
-### As a reader (non logged user)
-
-- As a reader, I want to be able to see a list of blog posts that a writer has posted on Github in the form of Gists.
-- As a reader, I want to be able to select a post on the index page and see the post details, it must be presented in HTML if Gist was a Markdown file.
-- As a reader, I want to be able to navigate from post to post, easily reading the next post.
-- As a reader, I want to be able to navigate back to the index page from a post so that I can select a different post to read.
-
-### As awritter (logged in user)
-
-- As a writer, I want to be able to post a Gist to Github and have that post show up on my blog so that a reader can read the new post.
-- As a writer, I want to be able to make updates to a post by updating the Gist, so that I can correct typos and make content updates.
+- Install dependencies: `yarn install`
+- Development server: `yarn start`
+- Run tests: `yarn test`
 
 ## Questions
 
-- What are your thoughts around continuous integration, where & how you would deploy this application?
-- What do you think you would do differently if you had 2 weeks to complete this assignment and no requirement to use Github. What would your backend solution look like?
-- How and where do you feel like this application should be deployed to?
-- Are you happy with your own solutions? If yes, which parts do you think are really well done, if not, what would you want to change?
+What are your thoughts around continuous integration, where & how you would deploy this application?
 
-## Delivery
+- I think it is a good way to develop and give our users the changes available.
+For example, if our users want a car to go to work, giving them the car in parts will not help their purpose. But, if you give them a skateboard, a bicycle, a motorcycle, and other things that help them get to work. They would be very happy.
+I would deploy in AWS or Heroku, both are good tools for CI (Continuous Integration).
+ 
+What do you think you would do differently if you had 2 weeks to complete this assignment and no requirement to use Github.
 
-Feel free to deliver this as your standard NPM/Yarn type of installation. Docker is fine as well. We expect delivery as a Zip file or from a public Git repository. (You can fork this repository as a starting point)
+- I would love to finish with the functionality of all the views, making the test code, adding alerts or warnings, I would also like to create a comment sections for the posts
 
-## Thanks
+What would your backend solution look like?
 
-We really want to thank you for taking the time to run through this code challenge. We value your time immensely. If you have any suggestions as to how we could improve this exercise, please let us know.
+- I would like to add a final point of comments for the posts. It will be interesting to read other logics and learn from them. I think it can be done with firebase easily, to see if it is scalable
 
-Again, thanks! And happy coding :)
+How and where do you feel like this application should be deployed to?
+
+- It should be deployed in a cloud computing, such as AWS, Salesforce, and others. This because is on-demand, the pay is for use, and the scope is global. As the project is on-test
+
+Are you happy with your own solutions? If yes, which parts do you think are really well done, if not, what would you want to change?
+
+- Yes, I am happy, because I have made progress in a short time with many solutions. I have read documentation that I had never read before with the GitHub API. The part I like the most is the SCSS part, usually it's what I find the hardest, but now I really liked it. On the other hand, I would like to add the registered user part
