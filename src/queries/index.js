@@ -8,7 +8,7 @@ export default async (url) => {
     org: 'octokit',
     type: 'private',
   });
-  const data = resp.data;
+  const { data } = resp;
 
   switch (resp.status) {
     case 401:
