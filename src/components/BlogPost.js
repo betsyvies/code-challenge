@@ -47,7 +47,7 @@ const BlogPost = () => {
               placeholder="Keyword..."
             />
           </label>
-          <div className="container-submit">
+          <div className={userData.user.name ? 'container-submit' : null}>
             <button type="submit">Search</button>
           </div>
           {

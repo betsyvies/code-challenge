@@ -18,11 +18,12 @@ const Posts = ({ gists }) => {
   const getGistsWithFormat = () => gists.slice(0, 5).map((gist) => {
     const { date, from_now } = getFormatDate(gist.created_at);
     const title = Object.keys(gist.files)[0];
+    const titleFirstLetterUpp = title.slice(0, 1).toUpperCase() + title.slice(1, title.length);
     return {
       id: gist.id,
       date,
       from_now,
-      title,
+      title: titleFirstLetterUpp,
       files: gist.files,
       description: gist.description,
     };
@@ -36,11 +37,11 @@ const Posts = ({ gists }) => {
             <div className="flex-start">
               <p>{gist.date}</p>
               <p>.</p>
-              <p className={i ? null : 'text-color'}>{gist.from_now}</p>
+              <p className={!i ? 'text-color' : null}>{gist.from_now}</p>
             </div>
-            <div className="flex-start">
+            <div className="flex-start container-title-post">
               <a href=".">{gist.title}</a>
-              <input type="button" value="Read" />
+              <a href="." className="text-color">Read</a>
             </div>
           </li>
         ))

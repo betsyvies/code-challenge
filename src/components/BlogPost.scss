@@ -44,5 +44,6 @@ span {
 .container-submit {
   @media screen and (min-width: $tablet) {
     text-align: start;
+    display: none;
   }
 };
