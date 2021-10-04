@@ -71,14 +71,7 @@ describe('Blog Post', () => {
     act(() => {
       fireEvent.click(screen.getByText('Search'));
     });
-
-    // const greetingData = await screen.findByTestId('show-name');
-
-    // expect(greetingData).toHaveTextContent('Pierina Rodriguez');
     const items = await screen.findAllByRole('listitem');
-    // expect(screen.getAllByRole('listitem')).toHaveLength(5);
-
     expect(items).toHaveLength(5);
-    // expect(screen.getByText(/Pierina Rodriguez/)).toBeInTheDocument();
   });
 });
