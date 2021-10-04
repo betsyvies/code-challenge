@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getUserGists } from './queries/user'
 
 const BlogPost = () => {
   const [userName, setUserName] = useState('');
@@ -8,9 +9,14 @@ const BlogPost = () => {
     setUserName(name);
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
-    console.log(userName);
+    try {
+      const data = await getUserGists(userName);
+      console.log(data);
+    } catch (err) {
+      console.error(err.message);
+    }
   };
 
   return (
