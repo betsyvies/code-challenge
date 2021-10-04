@@ -1,16 +1,14 @@
+/* eslint-disable camelcase */
 import React, { useState } from 'react';
 
-import UserProfile from './UserProfile';
+// import UserProfile from './UserProfile';
 import Posts from './Posts';
-import { getUser, getUserGists } from '../queries/user';
+import { getUser } from '../queries/user';
 import './BlogPost.scss';
 
 const BlogPost = () => {
   const [userName, setUserName] = useState('');
-  const [userData, setUserData] = useState({
-    user: {},
-    gists: [],
-  });
+  const [user, setUser] = useState({});
 
   const handleChange = (e) => setUserName(e.target.value);
 
@@ -18,8 +16,7 @@ const BlogPost = () => {
     e.preventDefault();
     try {
       const { avatar_url, name } = await getUser(userName);
-      const gists = await getUserGists(userName);
-      setUserData({ user: { avatar: avatar_url, name }, gists });
+      setUser({ avatar: avatar_url, name });
     } catch (err) {
       console.error(err.message);
     }
@@ -47,15 +44,12 @@ const BlogPost = () => {
               placeholder="Keyword..."
             />
           </label>
-          <div className={userData.user.name ? 'container-submit' : null}>
+          <div className={user.name ? 'container-submit' : null}>
             <button type="submit">Search</button>
           </div>
           {
-            userData.user.name ? (
-              <>
-                <UserProfile user={userData.user} />
-                <Posts gists={userData.gists} />
-              </>
+            user.name ? (
+              <Posts userName={userName} user={user} />
             ) : null
           }
         </form>

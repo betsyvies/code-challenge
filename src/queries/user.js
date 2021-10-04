@@ -1,5 +1,5 @@
 import requestFromAPI from './index';
 
-export const getUser = (user) => requestFromAPI(`GET /users/${user}`);
+export const getUser = (user) => requestFromAPI(`users/${user}`);
 
-export const getUserGists = (user) => requestFromAPI(`GET /users/${user}/gists`);
+export const getUserGists = (user) => requestFromAPI(`users/${user}/gists`);

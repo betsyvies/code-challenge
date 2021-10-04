@@ -13,7 +13,7 @@ const UserProfile = ({ user }) => {
         className="avatar-post"
       />
       <div>
-        <h3>{name}</h3>
+        <h3 data-testid="show-name">{name}</h3>
         <p className="subtitle-post">Posts</p>
       </div>
     </div>

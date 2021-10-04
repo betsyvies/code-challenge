@@ -1,14 +1,14 @@
-import { request } from '@octokit/request';
-
-export default async (url) => {
-  const resp = await request(url, {
+const baseUrl = 'https://api.github.com/';
+export default async (url, opts = {}) => {
+  const resp = await fetch(`${baseUrl}${url}`, {
+    ...opts,
     headers: {
-      authorization: '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',
+      'Content-Type': 'application/json',
+      Authorization: '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',
+      ...(opts || {}).headers,
     },
-    org: 'octokit',
-    type: 'private',
   });
-  const { data } = resp;
+  const data = await resp.json();
 
   switch (resp.status) {
     case 401:
