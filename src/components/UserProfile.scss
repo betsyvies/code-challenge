@@ -1,0 +1,21 @@
+@import '../scss/variables';
+
+.container-user-profile {
+  padding: 1rem 0;
+  border-bottom: 0.5px solid #f5f5f5;
+};
+.container-user-profile > div {
+  margin: 0 1rem;
+};
+.avatar-post {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+};
+.subtitle-post {
+  margin: 0;
+  color: $base-color;
+  font-weight: bolder;
+  font-size: 0.8rem;
+};
