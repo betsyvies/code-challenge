@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { getUserGists } from './queries/user'
+import './BlogPost.scss';
 
 const BlogPost = () => {
   const [userName, setUserName] = useState('');
@@ -20,17 +21,29 @@ const BlogPost = () => {
   };
 
   return (
-    <div>
-      <h1>Blog</h1>
-      <p>Explore the unknown. Uncover what matters. Prototype, test, repeat. Combine intuition with evidence. Design with intent and build it right.</p>
-      <form onSubmit={handleSearch}>
-        <label htmlFor="userName">
-          <input type="text" name="userName" onChange={handleChange} />
-        </label>
-        <div>
-          <button type="submit">Search</button>
-        </div>
-      </form>
+    <div className="search-view">
+      <div className="container-search-post">
+        <h1>Blog</h1>
+        <p>Explore the unknown. Uncover what matters. Prototype, test, repeat. Combine intuition with evidence. Design with intent and build it right.</p>
+        <form onSubmit={handleSearch}>
+          <label htmlFor="userName" className='flex-start'>
+            <span className="material-icons">
+              search
+            </span>
+            <input
+              type="text"
+              name="userName"
+              className='search'
+              onChange={handleChange}
+              placeholder='Keyword...'
+            />
+          </label>
+          <div className='container-submit'>
+            <button type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+      <div className="img-responsive" />
     </div>
   );
 }

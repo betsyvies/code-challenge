@@ -1,3 +1,4 @@
+@import './scss/variables';
 @import './scss/mixins';
 
 @include font-face('bold', bold);
@@ -21,7 +22,126 @@
 
 body {
   margin: 0;
-  font-family: 'Neuehanskendrick';
+  font-family: $font-family;
   font-style: normal;
   font-weight: 400;
+};
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
+
+/* Class general */ 
+
+.width-50 {
+  width: 50%;
+}
+.text-center {
+  text-align: center;
+};
+.background-white {
+  background-color: $background-color;
+}
+.flex {
+  display: flex;
+};
+.justify-center {
+  justify-content: center;
+};
+.justify-between {
+  justify-content: space-between;
+};
+.justify-start {
+  justify-content: flex-start;
+};
+.direction-column {
+  flex-direction: column;
+};
+.align-center {
+  align-items: center;
+};
+.flex-center {
+  @extend .flex;
+  @extend .justify-center;
+  @extend .align-center;
+};
+.flex-start {
+  @extend .flex;
+  @extend .justify-start;
+  @extend .align-center;
+};
+.flex-between {
+  @extend .flex;
+  @extend .justify-between;
+  @extend .align-center;
+};
+.flex-column {
+  @extend .flex;
+  @extend .direction-column;
+};
+.row {
+  @extend .flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  @extend .flex;
+  @extend .direction-column;
+  @extend .justify-between;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+/* Label general */
+
+h1 {
+  color: $base-color;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 1rem 0;
+  }
+};
+p {
+  color: $text-color;
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    text-align: justify;
+  }
+};
+button {
+  background-color: #1d1fdd;
+  border: none;
+  color: #FFFF;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  outline: none;
+};
