@@ -1,0 +1,27 @@
+@import './scss/mixins';
+
+@include font-face('bold', bold);
+@include font-face('bolditalic', bold, italic);
+@include font-face('extrabold', 900);
+@include font-face('extrabolditalic', 900, italic);
+@include font-face('extralight', lighter);
+@include font-face('extralightitalic', lighter, italic);
+@include font-face('heavy', bolder);
+@include font-face('heavyitalic', bolder , italic);
+@include font-face('light', 100);
+@include font-face('lightitalic', 100, italic);
+@include font-face('medium', 500);
+@include font-face('mediumitalic', 500, italic);
+@include font-face('regular');
+@include font-face('regularitalic', normal, italic);
+@include font-face('semibold', 600);
+@include font-face('semibolditalic', 600, italic);
+@include font-face('thin', 300);
+@include font-face('thinitalic', 300, italic);
+
+body {
+  margin: 0;
+  font-family: 'Neuehanskendrick';
+  font-style: normal;
+  font-weight: 400;
+}
